@@ -1,0 +1,54 @@
+## Client part (prefix='/')
+- welcome screen - `/`
+- login to cpanel - `/user/login`
+  - if user already logged, redirect to `cp/`
+  - else wait data
+- register - `/user/reg`
+- support - `/support`
+
+## Admin part (prefix='/admin')
+- dashboard - `/`
+  - 
+  - graphic of alliances quantity
+  - last violations
+  - last closed tasks
+  - new notes from watching tasks
+  - last users
+- tasks - `/tasks`
+  - 
+  - `/tasks/` - список задач:
+    - название
+    - время создания
+    - время окончания
+    - тип задачи
+    - статус наблюдения (активен/неактивен/нарушения)
+  - `/tasks/edit/<id>`
+  - `/tasks/info/<id>` - данные задачи + сводка
+    - название
+    - тип задачи (readonly)
+    - время создания/окончания
+    - связанные альянсы
+    - сводка:
+      - приток-отток пользователей
+      - создание новых записей + удаление
+      - все ли записи репостнуты
+    - список нарушений + зарегистрировать нарушение
+  - `/tasks/create`
+- channels - `/channels`
+  - 
+  - `/channels/` - список всех каналов
+  - `/channels/edit/<id>` - редактирование информации о канале + остановка связанных задач + добавление связанных задач
+  - `/channels/info/<id>` - просмотр информации о канале + краткая сводка из активных связанных задач
+  - `/channels/create`
+- alliances - `/alliances`
+  - 
+  - `/alliances/`
+  - `/alliances/edit/<id>` - редактирование информации об альянсе + остановка связанных задач + добавление связанных задач
+  - `/alliances/info/<id>` - просмотр информации об альянсе + краткая сводка из активных связанных задач
+  - `/alliances/create`
+- user - `/user`
+  - 
+  - `/user/`
+  - `/user/edit`
+  - `/user/logout`
+- support - `/support`
