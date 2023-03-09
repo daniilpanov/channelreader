@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_telegram_login',
+    'user',
+    'hello',
 ]
 
 MIDDLEWARE = [
@@ -120,3 +123,13 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# TELEGRAM BOT
+TELEGRAM_BOT_NAME = 'Groups manager bot'
+TELEGRAM_BOT_TOKEN = '5831634929:AAHyOSz9Xr7yv6_p--gV1l68H-0sXDyHDck'
+TELEGRAM_LOGIN_REDIRECT_URL = 'http://daniilpan2.temp.swtest.ru/'
+
+
+# Authentication
+AUTH_USER_MODEL = 'user.User'
